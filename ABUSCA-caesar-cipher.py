@@ -6,27 +6,27 @@ def main():
     menu_display()
     choice = 0
     while choice != quit:
-        choice = int(input("Enter Your Choice: "))
+        choice = int(input("\n Enter Your Choice: "))
         if choice == en:
             encryption()
         elif choice == dn:
             decryption()
         elif choice == quit:
-            print("Exiting the program")
+            print("Exiting the program", "\n")
         else:
-            print("Error: Invalid selection")
+            print("Error: Invalid selection", "\n")
 
 def encryption():
     user_text = input("Enter the text to be encrypted: ")
     shift_value = 3
     result = caesar_cipher(user_text, shift_value, "encrypt")
-    print("Encrypted text:", result)
+    print("Encrypted text:", result, "\n")
 
 def decryption():
     user_text = input("Enter the text to be decrypted: ")
     shift_value = -3
     result = caesar_cipher(user_text, shift_value, "decrypt")
-    print("Decrypted text:", result)
+    print("Decrypted text:", result, "\n")
 
 def caesar_cipher(text, shift, operation):
     result = ""
